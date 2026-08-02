@@ -80,15 +80,11 @@ Clone the repository and run it locally:
 ### Mobile Device Mode
 
 <div align="center">
-  <img src="./screenshots/Mobile home 1.png" alt="Mobile View 1" width="45%">
-  <img src="./screenshots/Mobile 2.png" alt="Mobile View 2" width="45%">
+  <img src="./screenshots/MobileSS1.png" alt="Mobile View 1" width="45%">
+  <img src="./screenshots/MobileSS2.png" alt="Mobile View 2" width="45%">
 </div>
 <br>
 <div align="center">
-  <img src="./screenshots/Mobile 4.png" alt="Mobile View 3" width="45%">
-  <img src="./screenshots/Mobile 7.png" alt="Mobile View 4" width="45%">
-</div>
-<div align="center">
-  <img src="./screenshots/Mobile 8.png" alt="Mobile View 3" width="45%">
-  <img src="./screenshots/Mobile 5.png" alt="Mobile View 4" width="45%">
+  <img src="./screenshots/image copy 2.png" alt="Mobile View 3" width="45%">
+  <img src="./screenshots/image copy 3.png" alt="Mobile View 4" width="45%">
 </div>
