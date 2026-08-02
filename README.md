@@ -32,7 +32,7 @@ The main challenge of this project was perfectly recreating a complex e-commerce
 
 ## 🔗 Live Site Link
 
-[![Live](https://img.shields.io/badge/Click_Here_For_Live_Site-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://applegadgets.sifat.online/)
+[![Live](https://img.shields.io/badge/Click_Here_For_Live_Site-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://apple.sifat.online/)
 
 ## Project Setup
 
@@ -40,10 +40,10 @@ Clone the repository and run it locally:
 
 ```bash
   # Clone the repository
-  git clone https://github.com/your-username/applegadgets.git
+  git clone https://github.com/your-username/apple.git
 
   # Navigate to the project directory
-  cd applegadgets
+  cd apple
 
   # Open index.html in your browser
   # Or use a live server extension in VS Code
