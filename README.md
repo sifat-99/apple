@@ -79,12 +79,12 @@ Clone the repository and run it locally:
 
 ### Mobile Device Mode
 
-<div align="center" style="display: flex; flex-direction: row; gap: 20px;">
-  <img src="./screenshots/MobileSS1.png" alt="Mobile View 1" width="45%">
-  <img src="./screenshots/MobileSS2.png" alt="Mobile View 2" width="45%">
+<div align="center">
+  <img src="./screenshots/MobileSS1.png" alt="Mobile View 1" width="45%" align="top">
+  <img src="./screenshots/MobileSS2.png" alt="Mobile View 2" width="45%" align="top">
 </div>
 <br>
 <div align="center">
-  <img src="./screenshots/image copy 2.png" alt="Mobile View 3" width="45%">
-  <img src="./screenshots/image copy 3.png" alt="Mobile View 4" width="45%">
+  <img src="./screenshots/image copy 2.png" alt="Mobile View 3" width="45%" align="top">
+  <img src="./screenshots/image copy 3.png" alt="Mobile View 4" width="45%" align="top">
 </div>
