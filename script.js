@@ -255,3 +255,30 @@ if (paginationNumbers.length > 0) {
         });
     });
 }
+
+// Mobile Filter Sidebar Toggle
+const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
+const categoryFilterSidebar = document.querySelector('.category-filter-sidebar');
+const mobileFilterClose = document.querySelector('.mobile-filter-close');
+const filterOverlay = document.querySelector('.filter-overlay');
+
+if (mobileFilterToggle && categoryFilterSidebar) {
+    mobileFilterToggle.addEventListener('click', () => {
+        categoryFilterSidebar.classList.add('active');
+        if (filterOverlay) filterOverlay.classList.add('active');
+    });
+}
+
+if (mobileFilterClose && categoryFilterSidebar) {
+    mobileFilterClose.addEventListener('click', () => {
+        categoryFilterSidebar.classList.remove('active');
+        if (filterOverlay) filterOverlay.classList.remove('active');
+    });
+}
+
+if (filterOverlay && categoryFilterSidebar) {
+    filterOverlay.addEventListener('click', () => {
+        categoryFilterSidebar.classList.remove('active');
+        filterOverlay.classList.remove('active');
+    });
+}
