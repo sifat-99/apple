@@ -244,3 +244,14 @@ if (searchInput && searchPopup) {
         e.stopPropagation();
     });
 }
+
+const paginationNumbers = document.querySelectorAll('.pagination-number');
+if (paginationNumbers.length > 0) {
+    paginationNumbers.forEach(number => {
+        number.addEventListener('click', (e) => {
+            e.preventDefault();
+            paginationNumbers.forEach(n => n.classList.remove('active'));
+            number.classList.add('active');
+        });
+    });
+}
