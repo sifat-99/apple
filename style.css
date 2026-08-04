@@ -2072,9 +2072,9 @@ img {
     .mobile-nav-list .category-nav-dropdown:hover .category-nav-list a:hover,
     .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover,
     .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover .category-sub-item .category-nav-sub-sub-list:hover {
-    transition: all 0.3s ease;
-        background-color: transparent;
-        color: #000000;
+        transition: all 0.3s ease;
+        background-color: transparent !important;
+        color: #000000 !important;
     }
 
     .navbar-search-container.desktop-search svg {
