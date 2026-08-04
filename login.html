@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="header">
+ <header class="header">
         <nav class="navbar main-navbar container">
             <div class="navbar-brand-row">
                 <a href="#" type="button" aria-label="Open" class="menu-toggle">
@@ -832,18 +832,33 @@
             
         </nav>
     </header>
-    <main class="coming-soon container">
-        <div class="coming-soon-container">
-            <div class="coming-soon-content">
-                <h1 class="coming-soon-title">COMING SOON</h1>
-                <p class="coming-soon-description">We are working on something special. Stay tuned!</p>
+    
+
+    <main class="container-main">
+        <section class="login-container container">
+            <div class="login-wrapper">
+                <form class="login-form" action="">
+                    <h3 class="login-title">Login</h3>
+                    <p class="login-subtitle">Don't have an account? <a href="#">Create an account</a></p>
+                    <div class="login-group">
+                        <label class="login-label" for="email">Email</label>
+                        <input class="login-input" type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="login-group">
+                        <label class="login-label" for="password">Password</label>
+                        <input class="login-input" type="password" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <div class="login-group">
+                        <button class="login-form-button" type="submit">Login</button>
+                    </div>
+                </form>
             </div>
-            <div class="coming-soon-image">
-                <img src="./images/assets/coming-soon.png" alt="Coming Soon">
-            </div>
-        </div>
+        </section>
     </main>
-<footer class="main-footer">
+
+
+
+    <footer class="main-footer">
 
         <section class="footer-about-section container">
             <div class="logo-location-container">
@@ -1104,8 +1119,7 @@
 
     </footer>
 
-
-     <nav class="bottom-nav">
+    <nav class="bottom-nav">
         <a href="index.html" class="bottom-nav-item active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
