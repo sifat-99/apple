@@ -88,13 +88,13 @@ if (showAllCategoriesBtn && featuredGrid) {
 
 
 // All carousel
-const allCarousels = document.querySelectorAll('.deals-carousel');
+const allCarousels = document.querySelectorAll('.deals-carousel, .navbar-search-popup-trending-products-grid, .category-cards-grid, .carousel-grid');
 
 allCarousels.forEach(carousel => {
     const container = carousel.parentElement;
     
-    const prevBtn = container.querySelector('.prev-deal');
-    const nextBtn = container.querySelector('.next-deal');
+    const prevBtn = container ? container.querySelector('.prev-deal') : null;
+    const nextBtn = container ? container.querySelector('.next-deal') : null;
     
     if (prevBtn && nextBtn) {
         const scrollAmount = 256;
@@ -108,7 +108,62 @@ allCarousels.forEach(carousel => {
         });
     }
 
-    const categoryNav = container.querySelector('.ag-computers-category-nav');
+    // This is for the drag to move the product cards
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let hasDragged = false;
+    
+    carousel.style.cursor = 'grab';
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        carousel.style.cursor = 'grabbing';
+        carousel.style.scrollBehavior = 'auto'; 
+        carousel.style.scrollSnapType = 'none';
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        hasDragged = false;
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+        carousel.style.scrollBehavior = '';
+        carousel.style.scrollSnapType = '';
+    });
+    
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+        carousel.style.scrollBehavior = '';
+        carousel.style.scrollSnapType = '';
+    });
+    
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1;
+        if (Math.abs(x - startX) > 5) {
+            hasDragged = true;
+        }
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    carousel.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    });
+
+    carousel.addEventListener('click', (e) => {
+        if (hasDragged) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, { capture: true });
+
+    const categoryNav = container ? container.querySelector('.ag-computers-category-nav') : null;
     if (categoryNav) {
         const categoryLinks = categoryNav.querySelectorAll('.category-link');
         const productCards = carousel.querySelectorAll('.product-card');
