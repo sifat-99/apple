@@ -14,7 +14,10 @@ if (menuToggle && mobileNavModal && mobileNavClose) {
 
     mobileNavModal.addEventListener('click', (e) => {
         if (e.target === mobileNavModal) {
-            mobileNavModal.classList.remove('active');
+            const rect = mobileNavModal.getBoundingClientRect();
+            if (e.clientX > rect.right) {
+                mobileNavModal.classList.remove('active');
+            }
         }
     });
 }
