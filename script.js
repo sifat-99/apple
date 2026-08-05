@@ -18,6 +18,16 @@ if (menuToggle && mobileNavModal && mobileNavClose) {
         }
     });
 }
+
+const mobileDropdowns = document.querySelectorAll('.mobile-nav-list .mobile-nav-dropdown, .mobile-nav-list .mobile-nav-sub-dropdown, .mobile-nav-list .mobile-nav-sub-sub-dropdown');
+mobileDropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (e.target.tagName.toLowerCase() === 'a') return;
+        this.classList.toggle('active');
+    });
+});
+
 if (categoryMenuToggleButton) {
     categoryMenuToggleButton.addEventListener('click', () => {
         mobileNavModal.classList.toggle('active');

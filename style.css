@@ -2119,9 +2119,13 @@ img {
         padding-bottom: 20px;
     }
 
-    .mobile-nav-list .category-nav-dropdown,
-    .mobile-nav-list .category-nav-sub-list,
-    .mobile-nav-list .category-nav-sub-sub-list {
+    .mobile-nav-list .mobile-nav-dropdown,
+    .mobile-nav-list .mobile-nav-sub-dropdown,
+    .mobile-nav-list .mobile-nav-sub-sub-dropdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         flex-wrap: wrap;
         padding: 8px 0;
         font-size: 14px;
@@ -2130,22 +2134,57 @@ img {
         color: #000000;
     }
 
-    .mobile-nav-list .category-nav-text,
-    .mobile-nav-list .category-sub-item-title {
+    .mobile-nav-list .mobile-nav-list a,
+    .mobile-nav-list .mobile-nav-sub-list a,
+    .mobile-nav-list .mobile-nav-sub-sub-list a {
+        padding: 8px 0;
+        color: #000000;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-nav-list .mobile-nav-text,
+    .mobile-nav-list .mobile-nav-sub-text {
         order: 1;
     }
 
-    .mobile-nav-list .category-nav-dropdown>i,
-    .mobile-nav-list .category-nav-sub-list>i,
-    .mobile-nav-list .category-nav-sub-sub-list>i {
+    .mobile-nav-list .mobile-nav-dropdown>i,
+    .mobile-nav-list .mobile-nav-sub-dropdown>i,
+    .mobile-nav-list .mobile-nav-sub-sub-dropdown>i {
         order: 2;
         transform: rotate(90deg);
+        transition: transform 0.3s ease-in-out;
     }
 
-    .mobile-nav-list .category-nav-list,
-    .mobile-nav-list .category-sub-item,
-    .mobile-nav-list .category-sub-sub-item {
+    .mobile-nav-list .mobile-nav-dropdown.active>i,
+    .mobile-nav-list .mobile-nav-sub-dropdown.active>i,
+    .mobile-nav-list .mobile-nav-sub-sub-dropdown.active>i {
+        transform: rotate(-90deg);
+    }
+
+    .mobile-nav-list .mobile-nav-list,
+    .mobile-nav-list .mobile-nav-sub-list,
+    .mobile-nav-list .mobile-nav-sub-sub-list {
         order: 3;
+        display: flex !important;
+        flex-direction: column;
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+        padding: 0 0 0 15px !important;
+        border-bottom: none !important;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
     }
 
     .login-button {
@@ -2153,22 +2192,18 @@ img {
     }
 
 
-    .mobile-nav-list .category-nav-dropdown:hover>.category-nav-list,
-    .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover>.category-sub-item,
-    .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover .category-sub-item .category-nav-sub-sub-list:hover>.category-sub-sub-item {
-        display: flex;
-        flex-direction: column;
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
+    .mobile-nav-list .mobile-nav-dropdown.active>.mobile-nav-list,
+    .mobile-nav-list .mobile-nav-sub-dropdown.active>.mobile-nav-sub-list,
+    .mobile-nav-list .mobile-nav-sub-sub-dropdown.active>.mobile-nav-sub-sub-list {
+        max-height: 2000px;
+        opacity: 1;
+        visibility: visible;
         margin-top: 10px;
-        padding-left: 15px;
     }
 
-    .mobile-nav-list .category-nav-dropdown:hover .category-nav-list a:hover,
-    .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover,
-    .mobile-nav-list .category-nav-dropdown:hover .category-nav-list .category-nav-sub-list:hover .category-sub-item .category-nav-sub-sub-list:hover {
+    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list a:hover,
+    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list .mobile-nav-sub-dropdown:hover,
+    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list .mobile-nav-sub-dropdown:hover .mobile-nav-sub-list .mobile-nav-sub-sub-dropdown:hover {
         transition: all 0.3s ease;
         background-color: transparent !important;
         color: #000000 !important;
