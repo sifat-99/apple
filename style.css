@@ -2201,14 +2201,6 @@ img {
         margin-top: 10px;
     }
 
-    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list a:hover,
-    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list .mobile-nav-sub-dropdown:hover,
-    .mobile-nav-list .mobile-nav-dropdown:hover .mobile-nav-list .mobile-nav-sub-dropdown:hover .mobile-nav-sub-list .mobile-nav-sub-sub-dropdown:hover {
-        transition: all 0.3s ease;
-        background-color: transparent !important;
-        color: #000000 !important;
-    }
-
     .navbar-search-container.desktop-search svg {
         order: 2;
         width: 44px;
